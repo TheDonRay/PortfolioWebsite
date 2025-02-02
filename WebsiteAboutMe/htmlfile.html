@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Website Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media.css">
+    </head>
+    <body>
+        <nav id="desktop-nav"> <!--- key thing to remember is that the 
+            - <nav id element is used to define a section of a webpage that contains navigation links to help the user-->
+            <div class="logo">
+                Rayat Chowdhury 
+            </div>
+            <div>
+                <ul class="nav-links"> <!--ul element is unordered list used to create list of items where the list doeesnt matter thats where the li tag comes from-->
+                    <li><a href="#about">About</a></li> <!--here we simply make the things we want listed as links about ourselves-->
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav> <!--here we ended the navigation tag which helps us navigate our links for our user-->
+        <nav id="hamburger-nav">
+            <div class="logo">Rayat Chowdhury</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()"> <!--here we use some JS to create the button function to actually click-->
+                    <span></span> <!--the span element helps us target a specific part of text or code and what we want with it-->
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links"> <!--for the menu links we have to add the onclick functions to each-->
+                    <li><a href="#about"  onclick="toggleMenu()">About</a></li> <!--here we simply make the things we want listed as links about ourselves-->
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div> <!--this is gonna be actual links that will open when we open with the JS function-->
+            </div>
+            
+        </nav>
+        <section id="profile"> <!--we use the section to create diff parts for our website in addition the id attribute allows us to style it with css and js-->
+            <div class="section_pic-container">
+                <img src="./IMG_4216.jpg" alt="Rayat Chowdhury profile picture"/>
+            </div>
+            <div class="section_text">
+                <p class="section_text_p1">Hello, I'm </p>
+                <h1 class="Title">Rayat Chowdhury</h1>
+                <p class="section_text_p2">Computer Science Student</p>
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-color-2" onclick="window.open('./resume.pdf')">
+                        Download CV
+                    </button>
+                    <button 
+                        class="btn btn-color-1" onclick="location.href='./#contact'"> <!--basically sends user to the contact section of our website-->
+                        Contact Info
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <a href="https://linkedin.com/in/rayat-chowdhury-b7a5122a3/" target="_blank">
+                        <img src="./linkedin.png" alt="My Linkedin profile" class="icon">
+                      </a>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <p class="section_text_p1">Get to Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img src="./experience.png" alt="Experience Icon" class="icon">
+                            <h3>Experience</h3>
+                            <p><strong>GAP retail store Associate</strong> ~ Provided exceptional customer service, and managed inventory, restocking and organization of product in our online system.
+                                <br><strong>Data/Stock analysis</strong> ~ Conducted research and comprehensice analysis of financial data and stock market trends using a stimulated portfolio. 
+                                <br><strong>Familiar in C++ language/HTML/CSS</strong>
+                            </p>
+                        </div>
+                        <div class="details-container">
+                            <img src="./education.png" alt="Education Icon" class="icon">
+                            <h3>Education</h3>
+                            <p><strong>BA in Computer Science</strong></p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p class="body-text">Hey, Rayat here, I'm currently a computer science student aimed not to bend by the simple laws of acquiring a tech job but making it worth the difference the world deserves to see through coding. I may not be the 
+                            best at coding itself as many arent but I wish to make a difference in a place in technology and coding itself.  </p>
+                    </div>
+                </div>
+            </div>
+            <img src="./arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'">
+        </section>
+        <section id="experience">
+            <p class="section_text_p1">Explore My</p>
+            <h1 class="title">Experience</h1>
+            <div class="Experience-details-containers">
+                <div class="about-containers"></div>
+                <div class="details-containers">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./checkmark.png"
+                            alt="Experience Icon"
+                            class="icon"
+                        />
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Intermediate</p>
+                        </div>
+                        </article>
+                        <article>
+                            <img src="./checkmark.png"
+                            alt="Experience Icon"
+                            class="icon"
+                        />
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-containers">
+                    <h2 class="experience-sub-title">Backend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./checkmark.png"
+                            alt="Experience Icon"
+                            class="icon"
+                        />
+                        <div>
+                            <h3>C++</h3>
+                            <p>Intermediate</p>
+                        </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <img src="./arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'">
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
